@@ -3,6 +3,7 @@ import TodoDoneList from '@/component/todolist/TodoDoneList'
 import { TodoForm } from '@/component/todolist/TodoForm'
 import TodoLists from '@/component/todolist/TodoLists'
 import * as S from '@/page/Todo.styled'
+import Menu from '@/component/menu/Menu'
 
 export default function Todo() {
   const [content, setContent] = useState('')
@@ -10,6 +11,7 @@ export default function Todo() {
   const [doneList, setDoneList] = useState<string[]>([])
 
   function handleAdd() {
+    event?.preventDefault()
     if (content) {
       setList([...list, content])
     }
@@ -29,6 +31,7 @@ export default function Todo() {
 
   return (
     <S.MainContainer>
+      <Menu />
       <S.MainHeader>행복한 하루 되세요, Hoonshi!</S.MainHeader>
       <TodoForm
         content={content}

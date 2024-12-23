@@ -10,7 +10,7 @@ export const MainContainer = styled.div`
 
 export const MainHeader = styled.h3`
   text-align: center;
-  padding-top: 18px;
+  padding: 24px;
   margin-top: 0;
 `
 

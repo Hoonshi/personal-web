@@ -22,9 +22,9 @@ export const ListItem = styled.li`
   /* background-color: #f9f9f9; */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 
-  &:hover {
+  /* &:hover {
     background-color: #f1f1f1;
-  }
+  } */
 `
 
 export const TodoText = styled.span`
