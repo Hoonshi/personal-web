@@ -23,7 +23,9 @@ export default function Menu() {
               <S.MenuItem>캘린더</S.MenuItem>
             </S.MenuNavLink>
 
-            <S.MenuItem>정보 기록</S.MenuItem>
+            <S.MenuNavLink to="/info">
+              <S.MenuItem>정보 기록</S.MenuItem>
+            </S.MenuNavLink>
           </S.MenuList>
         </S.Menu>
       )}

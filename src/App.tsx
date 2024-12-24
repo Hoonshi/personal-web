@@ -1,8 +1,10 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Todo from './page/todo-page/Todo'
 import GlobalStyle from './style/GlobalStyle'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Calendar from './page/calendar-page/Calendar'
+import Info from './page/info-page/Info'
+import RouteError from './page/route-error/RouteError'
 
 const App: React.FC = () => {
   return (
@@ -16,6 +18,14 @@ const App: React.FC = () => {
         <Route
           path="/calendar"
           element={<Calendar />}
+        />
+        <Route
+          path="info"
+          element={<Info />}
+        />
+        <Route
+          path="*"
+          element={<RouteError />}
         />
       </Routes>
     </BrowserRouter>
