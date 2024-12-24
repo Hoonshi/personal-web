@@ -19,7 +19,7 @@ export default function Menu() {
               <S.MenuItem>오늘의 할 일</S.MenuItem>
             </S.MenuNavLink>
 
-            <S.MenuNavLink to="calendar">
+            <S.MenuNavLink to="/calendar">
               <S.MenuItem>캘린더</S.MenuItem>
             </S.MenuNavLink>
 

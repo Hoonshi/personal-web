@@ -2,7 +2,7 @@ import { useState } from 'react'
 import TodoDoneList from '@/component/todolist/TodoDoneList'
 import { TodoForm } from '@/component/todolist/TodoForm'
 import TodoLists from '@/component/todolist/TodoLists'
-import * as S from '@/page/Todo.styled'
+import * as S from '@/page/todo-page/Todo.styled'
 import Menu from '@/component/menu/Menu'
 
 export default function Todo() {
