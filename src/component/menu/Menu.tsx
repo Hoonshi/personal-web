@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import * as S from './Menu.styled'
-import { NavLink } from 'react-router-dom'
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -24,7 +23,7 @@ export default function Menu() {
             </S.MenuNavLink>
 
             <S.MenuNavLink to="/info">
-              <S.MenuItem>정보 기록</S.MenuItem>
+              <S.MenuItem>메모장</S.MenuItem>
             </S.MenuNavLink>
           </S.MenuList>
         </S.Menu>
