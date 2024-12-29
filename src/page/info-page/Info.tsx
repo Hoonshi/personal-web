@@ -5,9 +5,11 @@ import InfoHeader from '@/component/info/info-form/InfoForm'
 import InfoBtn from '@/component/info/info-botton/InfoBtn'
 import { useState } from 'react'
 import InfoModal from '@/component/info/info-modal/InfoModal'
+// import { useStore } from '@/store/useStore'
 
 export default function Info() {
   const [isModal, setIsModal] = useState<Boolean>(false)
+  // const { selectInfo } = useStore()
 
   function handleOpenModal() {
     setIsModal(!isModal)

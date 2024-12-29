@@ -1,8 +1,8 @@
 import * as S from './InfoNote.styled'
-import { useInfoStore } from '@/store/useInfoStore'
+import { useStore } from '@/store/useStore'
 
 const PostCard = () => {
-  const { info } = useInfoStore()
+  const { info } = useStore()
 
   return (
     <>

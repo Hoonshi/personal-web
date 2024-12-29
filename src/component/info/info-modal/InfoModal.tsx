@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import * as S from './InfoModal.styled'
-import { useInfoStore } from '@/store/useInfoStore'
+import { useStore } from '@/store/useStore'
 
 interface Btn {
   onClick: () => void
@@ -10,12 +10,13 @@ export default function InfoModal({ onClick }: Btn) {
   const inputEl = useRef<HTMLInputElement>(null)
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
-  const { addInfo } = useInfoStore()
+  const { addInfo } = useStore()
 
   function handleSubmit() {
     addInfo(title, content)
     setTitle('')
     setContent('')
+    onClick()
   }
 
   useEffect(() => {
