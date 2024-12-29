@@ -9,6 +9,12 @@ export const InfoBacgkround = styled.div`
   background-position: center;
 `
 
+export const InfoContainer = styled.div`
+  width: 100%;
+  margin: 16px;
+  box-sizing: border-box;
+`
+
 export const InfoHeader = styled.div`
   font-size: 24px;
   text-align: center;
@@ -23,4 +29,14 @@ export const HeaderContainer = styled.div`
   display: flex;
   gap: 24px;
   justify-content: center;
+`
+export const NoteContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px;
+  justify-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `

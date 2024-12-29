@@ -1,8 +1,22 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as S from './InfoModal.styled'
+import { useInfoStore } from '@/store/useInfoStore'
 
-export default function InfoModal() {
+interface Btn {
+  onClick: () => void
+}
+
+export default function InfoModal({ onClick }: Btn) {
   const inputEl = useRef<HTMLInputElement>(null)
+  const [title, setTitle] = useState('')
+  const [content, setContent] = useState('')
+  const { addInfo } = useInfoStore()
+
+  function handleSubmit() {
+    addInfo(title, content)
+    setTitle('')
+    setContent('')
+  }
 
   useEffect(() => {
     inputEl.current?.focus()
@@ -16,11 +30,17 @@ export default function InfoModal() {
           type="text"
           placeholder="제목을 입력하세요"
           ref={inputEl}
+          value={title}
+          onChange={e => setTitle(e.target.value)}
         />
-        <S.TextArea placeholder="내용을 입력하세요" />
+        <S.TextArea
+          placeholder="내용을 입력하세요"
+          value={content}
+          onChange={e => setContent(e.target.value)}
+        />
         <S.ButtonContainer>
-          <S.SubmitButton>완료</S.SubmitButton>
-          <S.CancelButton>취소</S.CancelButton>
+          <S.SubmitButton onClick={handleSubmit}>완료</S.SubmitButton>
+          <S.CancelButton onClick={onClick}>취소</S.CancelButton>
         </S.ButtonContainer>
       </S.ModalContainer>
     </S.Overlay>

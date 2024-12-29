@@ -16,15 +16,17 @@ export default function Info() {
   return (
     <S.InfoBacgkround>
       <Menu />
+
       <S.InfoHeader>Hoonshi님의 메모</S.InfoHeader>
 
       <S.HeaderContainer>
         <InfoHeader />
         <InfoBtn onClick={handleOpenModal} />
-        {isModal && <InfoModal />}
+        {isModal && <InfoModal onClick={handleOpenModal} />}
       </S.HeaderContainer>
-
-      <InfoNote />
+      <S.NoteContainer>
+        <InfoNote />
+      </S.NoteContainer>
     </S.InfoBacgkround>
   )
 }

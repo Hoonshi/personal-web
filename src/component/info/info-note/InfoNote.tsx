@@ -1,11 +1,18 @@
 import * as S from './InfoNote.styled'
+import { useInfoStore } from '@/store/useInfoStore'
 
 const PostCard = () => {
+  const { info } = useInfoStore()
+
   return (
-    <S.CardContainer>
-      <S.CardTitle>제목</S.CardTitle>
-      <S.CardContent>내용</S.CardContent>
-    </S.CardContainer>
+    <>
+      {info.map((cur, index) => (
+        <S.CardContainer key={index}>
+          <S.CardTitle>{cur.title}</S.CardTitle>
+          <S.CardContent>{cur.content}</S.CardContent>
+        </S.CardContainer>
+      ))}
+    </>
   )
 }
 

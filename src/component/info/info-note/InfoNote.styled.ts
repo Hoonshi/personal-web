@@ -5,6 +5,7 @@ export const CardContainer = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  height: 250px;
   width: 300px;
   margin: 20px;
   cursor: pointer;
